@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog de Curiosidades</title>
+    <!-- Fonte Google: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-hero">
+        <h1>Meu Blog Curioso</h1>
+        <p>Vou compartilhar conhecimentos sobre fitness, universo, natureza e informação.</p>
+    </header>
+
+    <main class="main-container">
+        <section class="posts-grid">
+
+            <!-- Post 1: Meio Ambiente -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:leaf.svg?color=%232d6a4f" alt="Folha">
+                </div>
+                <h2>A Importância das Florestas Úmidas</h2>
+                <p class="author">Por: Marcelo Paludetto</p>
+                <p class="description">
+                    Estima-se que mais de 50% de todas as espécies de plantas e animais do planeta vivam nas florestas tropicais. Preservar esses ecossistemas é vital para conter as mudanças climáticas.
+                </p>
+                <p class="source">Fonte: <a href="https://www.nature.org" target="_blank">Nature Conservation</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+            <!-- Post 2: Academia -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:dumbbell.svg?color=%232d6a4f" alt="Haltere">
+                </div>
+                <h2>Construção Muscular e Sono</h2>
+                <p class="author">Por: Marcelo Paludetto</p>
+                <p class="description">
+                    O crescimento muscular não ocorre durante os treinos, mas sim durante o descanso. Dormir de 7 a 9 horas por noite libera o hormônio do crescimento (GH) essencial para a recuperação.
+                </p>
+                <p class="source">Fonte: <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">PubMed Health</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+            <!-- Post 3: Astrologia -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:sparkles.svg?color=%232d6a4f" alt="Estrelas">
+                </div>
+                <h2>O Que São os Signos Ascendentes?</h2>
+                <p class="author">Por: Giulliana Cestari</p>
+                <p class="description">
+                    Na astrologia, o ascendente representa a constelação que estava surgindo no horizonte no exato momento do seu nascimento, simbolizando a forma como você se expressa ao mundo.
+                </p>
+                <p class="source">Fonte: <a href="https://www.astrology.com" target="_blank">Astrology World</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+            <!-- Post 4: Fake News -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:shield-alert.svg?color=%232d6a4f" alt="Alerta">
+                </div>
+                <h2>Como Identificar Notícias Falsas</h2>
+                <p class="author">Por: Giulliana Cestari</p>
+                <p class="description">
+                    Títulos sensacionalistas, falta de data de publicação e ausência de fontes confiáveis são os principais indícios de desinformação circular na internet. Sempre cheque antes de compartilhar.
+                </p>
+                <p class="source">Fonte: <a href="https://www.factcheck.org" target="_blank">FactCheck.org</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
