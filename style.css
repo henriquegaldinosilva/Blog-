@@ -1,14 +1,36 @@
+/* Tema Claro (Padrão) */
 :root {
     --bg-main: #f4f7f5;
-    --header-bg: #1b4332; /* Verde escuro moderno */
+    --header-bg: #1b4332;
     --card-bg: #ffffff;
     --text-title: #081c15;
     --text-body: #2d3748;
     --text-muted: #4a5568;
     --accent-green: #2d6a4f;
+    --accent-green-bright: #40c078;
     --link-color: #1b4332;
     --border-color: #e2e8f0;
+    --btn-bg: #edf2f7;
+    --btn-border: #cbd5e0;
+    --btn-text: #2d3748;
     --font-primary: 'Inter', sans-serif;
+}
+
+/* Tema Escuro (Black Mode com Verde Claro) */
+body.dark-theme {
+    --bg-main: #121212;
+    --header-bg: #091a12;
+    --card-bg: #1e1e1e;
+    --text-title: #ffffff;
+    --text-body: #e2e8f0;
+    --text-muted: #a0aec0;
+    --accent-green: #52b788;
+    --accent-green-bright: #74c69d;
+    --link-color: #74c69d;
+    --border-color: #2d3748;
+    --btn-bg: #2d3748;
+    --btn-border: #4a5568;
+    --btn-text: #ffffff;
 }
 
 * {
@@ -24,14 +46,48 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header em Verde Escuro (Estilo Topo Alura) */
+/* Header em Verde Escuro com botões de tema */
 .header-hero {
     background-color: var(--header-bg);
     color: #ffffff;
     text-align: center;
     padding: 3.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.theme-btn.active {
+    background-color: var(--accent-green-bright);
+    color: #081c15;
+    font-weight: 600;
+    border-color: var(--accent-green-bright);
 }
 
 .header-hero h1 {
@@ -71,12 +127,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
@@ -125,15 +181,16 @@ body {
     text-decoration: underline;
 }
 
-/* Botões de Reação (Igual a imagem) */
+/* Botões de Reação */
 .reactions {
     display: flex;
     gap: 0.5rem;
 }
 
 .reactions button {
-    background-color: #edf2f7;
-    border: 1px solid #cbd5e0;
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    color: var(--btn-text);
     border-radius: 6px;
     padding: 0.25rem 0.6rem;
     font-size: 0.85rem;
@@ -141,9 +198,9 @@ body {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .reactions button:hover {
-    background-color: #e2e8f0;
+    filter: brightness(0.9);
 }
