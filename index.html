@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog de Curiosidades</title>
+    <title>Meu Blog Curioso</title>
     <!-- Fonte Google: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,12 @@
 <body>
 
     <header class="header-hero">
+        <div class="theme-toggle">
+            <button id="theme-dark-btn" class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+            <button id="theme-light-btn" class="theme-btn active" onclick="setTheme('light')">☀️ Claro</button>
+        </div>
         <h1>Meu Blog Curioso</h1>
-        <p>Vou compartilhar conhecimentos sobre fitness, universo, natureza e informação.</p>
+        <p>Vou compartilhar conhecimentos sobre fitness, astronomia, meio ambiente e informação.</p>
     </header>
 
     <main class="main-container">
@@ -23,10 +27,10 @@
             <!-- Post 1: Meio Ambiente -->
             <article class="card">
                 <div class="card-icon">
-                    <img src="https://api.iconify.design/lucide:leaf.svg?color=%232d6a4f" alt="Folha">
+                    <img src="https://api.iconify.design/lucide:leaf.svg?color=%232d6a4f" alt="Folha" class="icon-img">
                 </div>
                 <h2>A Importância das Florestas Úmidas</h2>
-                <p class="author">Por: Marcelo Paludetto</p>
+                <p class="author">Por: Henrique Galdino</p>
                 <p class="description">
                     Estima-se que mais de 50% de todas as espécies de plantas e animais do planeta vivam nas florestas tropicais. Preservar esses ecossistemas é vital para conter as mudanças climáticas.
                 </p>
@@ -40,10 +44,10 @@
             <!-- Post 2: Academia -->
             <article class="card">
                 <div class="card-icon">
-                    <img src="https://api.iconify.design/lucide:dumbbell.svg?color=%232d6a4f" alt="Haltere">
+                    <img src="https://api.iconify.design/lucide:dumbbell.svg?color=%232d6a4f" alt="Haltere" class="icon-img">
                 </div>
                 <h2>Construção Muscular e Sono</h2>
-                <p class="author">Por: Marcelo Paludetto</p>
+                <p class="author">Por: Henrique Galdino</p>
                 <p class="description">
                     O crescimento muscular não ocorre durante os treinos, mas sim durante o descanso. Dormir de 7 a 9 horas por noite libera o hormônio do crescimento (GH) essencial para a recuperação.
                 </p>
@@ -54,17 +58,17 @@
                 </div>
             </article>
 
-            <!-- Post 3: Astrologia -->
+            <!-- Post 3: Astronomia -->
             <article class="card">
                 <div class="card-icon">
-                    <img src="https://api.iconify.design/lucide:sparkles.svg?color=%232d6a4f" alt="Estrelas">
+                    <img src="https://api.iconify.design/lucide:telescope.svg?color=%232d6a4f" alt="Telescópio" class="icon-img">
                 </div>
-                <h2>O Que São os Signos Ascendentes?</h2>
-                <p class="author">Por: Giulliana Cestari</p>
+                <h2>O Mistério da Matéria Escura</h2>
+                <p class="author">Por: Henrique Galdino</p>
                 <p class="description">
-                    Na astrologia, o ascendente representa a constelação que estava surgindo no horizonte no exato momento do seu nascimento, simbolizando a forma como você se expressa ao mundo.
+                    Aproximadamente 85% de toda a matéria do universo é invisível para os instrumentos tradicionais. Conhecida como matéria escura, ela interage apenas por meio da gravidade.
                 </p>
-                <p class="source">Fonte: <a href="https://www.astrology.com" target="_blank">Astrology World</a></p>
+                <p class="source">Fonte: <a href="https://www.nasa.gov" target="_blank">NASA Science</a></p>
                 <div class="reactions">
                     <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
                     <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
@@ -74,14 +78,48 @@
             <!-- Post 4: Fake News -->
             <article class="card">
                 <div class="card-icon">
-                    <img src="https://api.iconify.design/lucide:shield-alert.svg?color=%232d6a4f" alt="Alerta">
+                    <img src="https://api.iconify.design/lucide:shield-alert.svg?color=%232d6a4f" alt="Alerta" class="icon-img">
                 </div>
                 <h2>Como Identificar Notícias Falsas</h2>
-                <p class="author">Por: Giulliana Cestari</p>
+                <p class="author">Por: Henrique Galdino</p>
                 <p class="description">
                     Títulos sensacionalistas, falta de data de publicação e ausência de fontes confiáveis são os principais indícios de desinformação circular na internet. Sempre cheque antes de compartilhar.
                 </p>
                 <p class="source">Fonte: <a href="https://www.factcheck.org" target="_blank">FactCheck.org</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+            <!-- Post 5: Astronomia -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:orbit.svg?color=%232d6a4f" alt="Órbita" class="icon-img">
+                </div>
+                <h2>Exoplanetas Habitáveis e a Vida Extraterrestre</h2>
+                <p class="author">Por: Henrique Galdino</p>
+                <p class="description">
+                    Cientistas já catalogaram milhares de planetas fora do nosso Sistema Solar. A busca por exoplanetas na "zona habitável" busca condições adequadas para ter água líquida.
+                </p>
+                <p class="source">Fonte: <a href="https://www.eso.org" target="_blank">European Southern Observatory</a></p>
+                <div class="reactions">
+                    <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
+                    <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
+                </div>
+            </article>
+
+            <!-- Post 6: Meio Ambiente -->
+            <article class="card">
+                <div class="card-icon">
+                    <img src="https://api.iconify.design/lucide:droplet.svg?color=%232d6a4f" alt="Gota de Água" class="icon-img">
+                </div>
+                <h2>Preservação dos Oceanos e Plásticos</h2>
+                <p class="author">Por: Henrique Galdino</p>
+                <p class="description">
+                    Cerca de 8 milhões de toneladas de plástico vão parar nos oceanos todos os anos. A conscientização e reciclagem são medidas urgentes para proteger a fauna marinha.
+                </p>
+                <p class="source">Fonte: <a href="https://www.unep.org" target="_blank">PNUMA / ONU</a></p>
                 <div class="reactions">
                     <button class="like-btn" onclick="addReaction(this)">💖 <span class="count">0</span></button>
                     <button class="fire-btn" onclick="addReaction(this)">👍 <span class="count">0</span></button>
