@@ -17,18 +17,18 @@ function setTheme(theme) {
         btnDark.classList.add('active');
         btnLight.classList.remove('active');
         
-        // Atualiza a cor dos ícones SVG via URL para o tom de verde mais claro
+        // Altera a cor dos ícones SVG para o verde mais claro no tema escuro
         icons.forEach(img => {
-            img.src = img.src.replace('color=%232d6a4f', 'color=%2352b788');
+            img.src = img.src.replace(/color=(%23|#)2d6a4f/g, 'color=%2352b788');
         });
     } else {
         body.classList.remove('dark-theme');
         btnLight.classList.add('active');
         btnDark.classList.remove('active');
         
-        // Retorna os ícones para a cor verde original
+        // Retorna a cor dos ícones para o verde escuro no tema claro
         icons.forEach(img => {
-            img.src = img.src.replace('color=%2352b788', 'color=%232d6a4f');
+            img.src = img.src.replace(/color=(%23|#)52b788/g, 'color=%232d6a4f');
         });
     }
 }
