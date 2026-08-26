@@ -19,18 +19,9 @@
 /* Tema Escuro (Black Mode com Verde Claro) */
 body.dark-theme {
     --bg-main: #121212;
-    --header-bg: #091a12;
+    --header-bg: #1f4d36; /* Verde mais claro para o modo escuro */
     --card-bg: #1e1e1e;
-    --text-title: #ffffff;
-    --text-body: #e2e8f0;
-    --text-muted: #a0aec0;
-    --accent-green: #52b788;
-    --accent-green-bright: #74c69d;
-    --link-color: #74c69d;
-    --border-color: #2d3748;
-    --btn-bg: #2d3748;
-    --btn-border: #4a5568;
-    --btn-text: #ffffff;
+    ...
 }
 
 * {
